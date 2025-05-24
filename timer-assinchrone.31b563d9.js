@@ -679,13 +679,19 @@ const interval = setInterval(()=>{
 // text.innerHTML = cycle;
 //---------------------------------------------------
 let count = 0;
+const clickArea = document.getElementById("click-area");
+const clickCount = document.getElementById("click-count");
+function handleClick() {
+    count += 1;
+    clickCount.textContent = `${count}`;
+}
+clickArea.addEventListener("click", handleClick);
+//------------------------------------------------------
 let timeLeft = 30000;
 let timerInterval;
 let timerStarted = false;
 const startButton = document.getElementById("start-button");
 const timerDisplay = document.getElementById("timer-clicker");
-const clickArea = document.getElementById("click-area");
-const clickCount = document.getElementById("click-count");
 function startTimer() {
     if (timerStarted) return;
     timerStarted = true;
@@ -740,6 +746,43 @@ function updateTimerDisplay() {
     timerPlay.textContent = `00:${timerTime < 10 ? '0' + timerTime : timerTime}`;
 }
 startTimer();
+//-----------------------------------------------------------х
+const time = document.querySelector(".time");
+const stopTime = document.querySelector(".stop-time");
+const messageTimers = document.querySelector("message-time");
+// let a = Number(prompt("Type time"))
+// const timer = document.querySelector(".num")
+// const stop = document.querySelector(".stop")
+// console.log(a)
+// const intervals = setInterval(() => {
+//     a -= 1
+//     timer.innerHTML = a
+//     if (a >= 0) { 45
+//         timer.innerHTML = a
+//     }
+//     else {
+//         clearInterval(interval)
+//     }
+// }, 1000)
+// stop.addEventListener("click", () => {
+//     clearInterval(interval)
+// })
+// //------------------------------------------------------------
+const animate = document.querySelector(".animate");
+const animationId = setInterval(()=>{
+    animate.style.borderRadius = `${Math.random() * 250}px`;
+    const red = Math.round(Math.random() * 255 + 0);
+    const green = Math.round(Math.random() * 255 + 0);
+    const blue = Math.round(Math.random() * 255 + 0);
+    animate.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+    console.log(`rgb(${(red, green, blue)})`);
+}, 1000);
+//4task--------------------------------------------
+const type = prompt("Type time");
+const messageTimer = document.querySelector(".message-time");
+const timerTest = setInterval(()=>{
+    messageTimer.innerHTML = `<p>Text${type}</p>`;
+}, Number(`${type}000`));
 
 },{}]},["5j6Kf","a0t4e"], "a0t4e", "parcelRequiref886", {})
 
