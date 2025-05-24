@@ -163,3 +163,16 @@ q {
     background: linear-gradient(to right, rgb(0, 255, 255), rgb(255, 196, 0));
     text-align: center;
 }
+.animate {
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    border: 2px solid pink;
+}
+#click-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none; 
+}

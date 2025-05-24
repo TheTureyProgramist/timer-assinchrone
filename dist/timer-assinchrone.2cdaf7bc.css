@@ -100,4 +100,19 @@ blockquote, q {
   font-size: 30px;
   font-weight: bold;
 }
+
+.animate {
+  background-color: brown;
+  border: 2px solid pink;
+  width: 200px;
+  height: 200px;
+}
+
+#click-area {
+  cursor: pointer;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 /*# sourceMappingURL=timer-assinchrone.2cdaf7bc.css.map */
