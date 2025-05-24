@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>delay</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="interval-post"></div>
+  <div class="animation">
+    <button id="start-button" class="clicker__start-button">Розпочати</button>
+    <div id="timer-clicker" class="clicker__timer">00:30000мс</div>
+    <div class="clicker__formater">
+      <div id="click-area" class="clicker__click-area">
+        <div class="clicker__clicks-text">
+          Кліки: <span id="click-count">0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="time-post" style="margin-right: 1000px;"></div>
+  <div class="timer">
+    <div id="timer" class="timer">00:60</div>
+    <p class="message"></p>
+  </div>
+  <div class="animate-timer"></div>
+  <script type="module" src="./index.js"></script>
+</body>
+</html>
